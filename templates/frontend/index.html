@@ -1,31 +1,41 @@
 {% extends 'frontend/base.html' %}
 {% block title %} Home {% endblock %}
 {% block content %}
+<style type = "text/css">
+    a:link {
+        text-decoration: none;
+        color: white;
+    }
+    a:visited {
+        text-decoration: none;
+        color: white;
+    }
+    a:hover {
+        text-decoration: none;
+        color: white;
+    }
+    a:active {
+        text-decoration: none;
+        color: white;
+    }
+</style>
+<html>
+    <body>
+        
+       <table border="0", align="center", width="60%", height="50%">
+            <tr>
+                <th bgcolor="Red"><font color ="white"><h1 align = 'center'><a href="#appetizer">
+                    <br><img src='static/images/image1.jpg', wide = "50%", height="50%"><br>APPETIZER</a></h5></font></th>
+                <th bgcolor="Green"><font color ="white"><h1 align = 'center'><a href="#maindish">
+                    <br><img src='static/images/image2.jpg', wide = "50%", height="50%"><br>MAIN DISH</a></h5></font></th>
+            </tr>
+            <tr>
+                <td bgcolor="Blue"><font color ="white"><h1 align = 'center'><a href="#sidedish">
+                    <br><img src='static/images/image3.jpg', wide = "50%", height="50%"><br>SIDE DISH</a></h5></font></td>
+                <td bgcolor="Orange"><font color ="white"><h1 align = 'center'><a href="#dessert">
+                    <br><img src='static/images/image4.jpg', wide = "50%", height="50%"><br>DESSERT</a></h5></font></td>
+            </tr>
 
-<div class="container">
-    <table class = "table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Detail</th>
-                <th>Barcode</th>
-                <th>Qty</th>
-                <th>Price</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for p in products %}
-            <tr>
-                <td>{{p.product_name}}</td>
-                <td>{{p.product_detail}}</td>
-                <td>{{p.product_barcode}}</td>
-                <td>{{p.product_qty}}</td>
-                <td>{{p.product_price}}</td>
-                <td>{{p.product_status}}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
+        </body>
+</html>
 {% endblock %}
